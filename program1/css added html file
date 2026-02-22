@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Event Booking - Home</title>
+</head>
+<body style="font-family: Arial; background-color: #f4f4f4; text-align:center;">
+
+    <h1 style="color: darkblue;">Welcome to Online Event Booking</h1>
+
+    <p style="font-size:18px; color:green;">
+        Book your favorite events easily!
+    </p>
+
+    <button style="background: orange; padding:10px 20px; border:none; border-radius:5px;">
+        View Events
+    </button>
+
+</body>
+</html>
