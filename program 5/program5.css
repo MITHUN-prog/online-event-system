@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking Success</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #e6ffe6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .success-box {
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px gray;
+            animation: slideIn 2s ease;
+        }
+
+        h1 {
+            color: green;
+            animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px lightgreen;
+            }
+            to {
+                text-shadow: 0 0 15px darkgreen;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="success-box">
+    <h1>Booking Successful!</h1>
+    <p>Your tickets have been confirmed.</p>
+</div>
+
+</body>
+</html>
