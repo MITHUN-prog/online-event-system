@@ -1,0 +1,31 @@
+body {
+    font-family: Arial;
+    background-color: #fff0f5;
+    text-align: center;
+}
+
+h1 {
+    color: purple;
+}
+
+form {
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px gray;
+}
+
+input {
+    width: 90%;
+    padding: 8px;
+}
+
+button {
+    background-color: #ff0066;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+}
