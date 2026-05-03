@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX with JSON</title>
+
+    <script>
+        function loadStudents() {
+            var xhr = new XMLHttpRequest();
+
+            xhr.open("GET", "students.json", true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+
+                    var students = JSON.parse(xhr.responseText);
+
+                    var output = "<table border='1'><tr><th>ID</th><th>Name</th><th>Department</th></tr>";
+
+                    for (var i = 0; i < students.length; i++) {
+                        output += "<tr><td>" + students[i].id +
+                                  "</td><td>" + students[i].name +
+                                  "</td><td>" + students[i].dept + "</td></tr>";
+                    }
+
+                    output += "</table>";
+
+                    document.getElementById("result").innerHTML = output;
+                }
+            };
+
+            xhr.send();
+        }
+    </script>
+
+</head>
+<body>
+
+<h2>AJAX with JSON Example</h2>
+
+<button onclick="loadStudents()">Load Student Data</button>
+
+<br><br>
+
+<div id="result"></div>
+
+</body>
+</html>
