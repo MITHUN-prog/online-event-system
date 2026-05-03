@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX Text File Example</title>
+
+    <script>
+        function loadStudentData() {
+            var xhr = new XMLHttpRequest();
+
+            xhr.open("GET", "students.txt", true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    document.getElementById("output").innerHTML =
+                        "<pre>" + xhr.responseText + "</pre>";
+                }
+            };
+
+            xhr.send();
+        }
+    </script>
+
+</head>
+<body>
+
+<h2>Student Records (AJAX)</h2>
+
+<button onclick="loadStudentData()">Load Student Data</button>
+
+<br><br>
+
+<div id="output" style="border:1px solid black; padding:10px;"></div>
+
+</body>
+</html>
